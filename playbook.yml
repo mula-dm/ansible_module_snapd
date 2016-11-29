@@ -1,0 +1,14 @@
+- hosts: localhost
+  tasks:
+    - name: update snap cache
+      snap:
+        upgrade: yes
+
+    - name: snap
+      snap:
+        name: "{{ item }}" 
+        state: absent
+      with_items:
+        - hello-world
+        - hello-world
+  become: true
