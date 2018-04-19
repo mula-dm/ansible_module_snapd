@@ -6,7 +6,7 @@
 
     - name: snap
       snap:
-        name: "{{ item }}" 
+        name: "{{ item }}"
         state: absent
       with_items:
         - hello-world
